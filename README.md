@@ -1,4 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Vaktin varsa okumanı tavsiye ederim!
+İki üç güne böyle basit mini siteler çıkarma fantezimin ikinci ürünüyle karşı karşıyasınız!
+İndirme hızını ve dosya boyutunu giriyorsun akabinde ne kadar süreceği belirtiliyor.
+Tailwind'in etinden sütünden faydalanmaya devam. CSS'ten sonra ilaç gibi geldi valla.
+
+Neysenim, canlıdaki hali için [buraya](https://downloadcalculator.comax.tech) tıklayıverirsiniz artık.
+
+Küçük bir not: Bir şeyler ters gitmiş ve Down Speed ve File Size kutucukları birbirine yapışmış adeta. Dev halinde böyle bir şey yoktu, bir bakacağım boş olduğumda. Unutmazsam şayet.
+
+Üşengeçler için bir görsel fırlatayım...
+
+
+<img width="1479" alt="Ekran Resmi 2023-11-14 18 42 53" src="https://github.com/OyuNet/DownloadCalculator/assets/68649893/5057695c-dfbe-49a9-9cb1-c2bfb0e15de8">
+
 
 ## Getting Started
 
