@@ -60,7 +60,7 @@ export default function Home() {
             setDownType(newDownType);
           }}
           aria-label="Download Type"
-          className="mb-4"
+          className="m-4"
         >
           <ToggleButton value="mbit">Mbit</ToggleButton>
           <ToggleButton value="gbit">Gbit</ToggleButton>
@@ -73,7 +73,7 @@ export default function Home() {
           onChange={(event) => {
             setDownSpeed(event.target.value);
           }}
-          className="mb-4"
+          className="m-2"
         />
 
         <TextField
@@ -83,7 +83,7 @@ export default function Home() {
           onChange={(event) => {
             setFileSize(event.target.value);
           }}
-          className="mb-4"
+          className="m-2"
         />
 
         <ToggleButtonGroup
@@ -94,7 +94,7 @@ export default function Home() {
             setFileType(newType);
           }}
           aria-label="File Size Type"
-          className="mb-4"
+          className="m-2"
         >
           <ToggleButton value="gb">GB</ToggleButton>
           <ToggleButton value="mb">MB</ToggleButton>
