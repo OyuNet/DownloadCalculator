@@ -5,6 +5,7 @@ import {
   ToggleButton,
   ToggleButtonGroup,
 } from "@mui/material";
+import prettyMilliseconds from "pretty-ms";
 import React from "react";
 
 export default function Home() {
@@ -67,7 +68,7 @@ export default function Home() {
         Download Calculator
       </h1>
 
-      <div className="flex flex-col items-center max-w-md mx-auto bg-white p-8 rounded-md shadow-md">
+      <div className="flex flex-col items-center max-w-md mx-auto bg-white p-8 rounded-md shadow-md gap-4 mt-8">
         <ToggleButtonGroup
           color="primary"
           value={downType}
@@ -76,10 +77,9 @@ export default function Home() {
             setDownType(newDownType);
           }}
           aria-label="Download Type"
-          className="m-4"
         >
-          <ToggleButton value="mbit">Mbit</ToggleButton>
-          <ToggleButton value="gbit">Gbit</ToggleButton>
+          <ToggleButton value="mbit" style={{ textTransform: 'none' }}>Mbit</ToggleButton>
+          <ToggleButton value="gbit" style={{ textTransform: 'none' }}>Gbit</ToggleButton>
         </ToggleButtonGroup>
 
         <TextField
@@ -89,7 +89,6 @@ export default function Home() {
           onChange={(event) => {
             setDownSpeed(event.target.value);
           }}
-          className="m-2"
         />
 
         <TextField
@@ -99,18 +98,16 @@ export default function Home() {
           onChange={(event) => {
             setFileSize(event.target.value);
           }}
-          className="m-2"
         />
 
         <ToggleButtonGroup
           color="primary"
           value={fileType}
           exclusive
-          onChange={(event, newType) => {
+          onChange={(_, newType) => {
             setFileType(newType);
           }}
           aria-label="File Size Type"
-          className="m-2"
         >
           <ToggleButton value="gb">GB</ToggleButton>
           <ToggleButton value="mb">MB</ToggleButton>
@@ -133,15 +130,13 @@ export default function Home() {
           <div className="text-center">
             <p className="text-lg">
               Your approximately download time will be:{" "}
-              <span className="font-bold">{timeAsSecond.toFixed(0)}</span>{" "}
-              seconds.
+              <span className="font-bold">{prettyMilliseconds(timeAsSecond.toFixed(0)*1000)}</span>
             </p>
             <p className="text-lg">
               If we consider 10% speed loss then your download time will be:{" "}
               <span className="font-bold">
-                {((timeAsSecond * 10) / 9).toFixed(0)}
-              </span>{" "}
-              seconds.
+                {prettyMilliseconds(((timeAsSecond * 10) / 9).toFixed(0)*1000)}
+              </span>
             </p>
           </div>
         </div>
